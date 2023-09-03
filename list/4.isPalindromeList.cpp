@@ -76,7 +76,7 @@ bool isPalindrome3(Node* head){
     }
     fast=slow->next;    //右边部分的第一个节点
     slow->next=nullptr;
-    while(fast){
+    while(fast){        //右边部分逆序
         Node* next=fast->next;
         fast->next=slow;
         slow=fast;
@@ -132,5 +132,5 @@ int main(){
     disp(node);
     cout<<isPalindrome3(node)<<endl;
     disp(node);
-    return true;
+    return 0;
 }
